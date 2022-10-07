@@ -5,16 +5,22 @@ export default class ageCalculator {
 
   ageCalc() {
     let ageArray = [];
-    let mercAge = (this.ageInput * (0.24));
-    let venAge = (this.ageInput * (0.62));
-    let marsAge = (this.ageInput * (1.88));
-    let jupAge = (this.ageInput * (11.86));
+    let mercAge = Math.round(this.ageInput / (0.24));
+    let venAge = Math.round(this.ageInput / (0.62));
+    let marsAge = Math.round(this.ageInput / (1.88));
+    let jupAge = Math.round(this.ageInput / (11.86));
     ageArray.push(mercAge, venAge, marsAge, jupAge);
     return ageArray;
   }
 
   expectCalc() {
+    let expectArray = [];
     let lifeExpect = Math.round(70.6 - this.ageInput);
-    return lifeExpect;
+    let mercExpect = 294 - (Math.round(this.ageInput / (0.24)));
+    let venExpect = Math.round(this.ageInput / (0.62));
+    let marsExpect = Math.round(this.ageInput / (1.88));
+    let jupExpect = Math.round(this.ageInput / (11.86));
+    expectArray.push(lifeExpect, mercExpect, venExpect, marsExpect, jupExpect);
+    return expectArray;
   }
 }

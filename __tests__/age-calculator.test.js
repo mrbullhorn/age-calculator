@@ -9,21 +9,27 @@ describe ('ageCalculator', () => {
 
   test('should return users age in Mercury years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()[0]).toEqual(8.64);
+    expect(myAgeCalculator.ageCalc()[0]).toEqual(150);
   });
 
   test('should return users age in Mercury years and Venus years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()[0, 1]).toEqual((8.64, 22.32));
+    expect(myAgeCalculator.ageCalc()[0, 1]).toEqual((150, 58));
   });
 
   test('should return users age in an array in Mercury, Venus, Mars and Jupiter years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()).toEqual([8.64, 22.32, 67.67999999999999, 426.96])
+    expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3])
   });
 
   test('should return users life expectancy based on average male life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.expectCalc()).toEqual(35);
-  })
+    expect(myAgeCalculator.expectCalc()[0]).toEqual(35);
+  });
+  
+  test ('should return users life expectancy on Mercury based on average male life expectancy', ()=> {
+  const myAgeCalculator = new ageCalculator(36);
+  expect(myAgeCalculator.expectCalc()[1]).toEqual(144);
+  });
 });
+
