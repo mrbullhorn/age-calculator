@@ -34,7 +34,7 @@ describe ('ageCalculator', () => {
 
   test('should return users life expectancy on all planets based on average male life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.expectCalc().toEqual([144, 56, 19, 3]))
-  })
+    expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3])
+  });
 });
 
