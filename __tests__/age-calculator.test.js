@@ -19,7 +19,7 @@ describe ('ageCalculator', () => {
 
   test('should return users age in an array in Mercury, Venus, Mars and Jupiter years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3])
+    expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3]);
   });
 
   test('should return users life expectancy based on average male life expectancy', ()=> {
@@ -34,17 +34,17 @@ describe ('ageCalculator', () => {
 
   test('should return users life expectancy on all planets based on average male life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3])
+    expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3]);
   });
 
   test('should determine if input has surpassed life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(100);
-    expect(myAgeCalculator.expectCalc()).toEqual('great job')
+    expect(myAgeCalculator.expectCalc()[0]).toEqual(29);
   });
 
   test('if users age surpassed life expectancy should return array of values of years lived past life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(100);
-    expect(myAgeCalculator.expectCalc()).toEqual([29, 123, 47, 15, 2])
-  })
+    expect(myAgeCalculator.expectCalc()).toEqual([29, 123, 47, 15, 2]);
+  });
 });
 

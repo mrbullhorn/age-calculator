@@ -22,9 +22,13 @@ export default class ageCalculator {
     let jupExpect = 6 - (Math.round(this.ageInput / (11.86)));
     expectArray.push(lifeExpect, mercExpect, venExpect, marsExpect, jupExpect);
     if (this.ageInput > 70.6) {
-       return "great job"
+       let surpassArray = [];
+       expectArray.forEach((e) => {
+        surpassArray.push(Math.abs(e))
+       });
+       return surpassArray;
       } else {
     return expectArray;
     }
   }
-}
+};
