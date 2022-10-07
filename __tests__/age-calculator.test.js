@@ -9,7 +9,7 @@ describe ('ageCalculator', () => {
 
   test('should return users age in Mercury years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()).toEqual(8.64);
+    expect(myAgeCalculator.ageCalc()[0]).toEqual(8.64);
   });
 
   test('should return users age in Mercury years and Venus years', ()=> {
