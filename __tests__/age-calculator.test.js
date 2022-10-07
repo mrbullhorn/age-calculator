@@ -41,5 +41,10 @@ describe ('ageCalculator', () => {
     const myAgeCalculator = new ageCalculator(100);
     expect(myAgeCalculator.expectCalc()).toEqual('great job')
   });
+
+  test('if users age surpassed life expectancy should return array of values of years lived past life expectancy', ()=> {
+    const myAgeCalculator = new ageCalculator(100);
+    expect(myAgeCalculator.expectCalc()).toEqual([29, 123, 47, 15, 2])
+  })
 });
 
