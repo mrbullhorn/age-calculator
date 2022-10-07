@@ -21,4 +21,9 @@ describe ('ageCalculator', () => {
     const myAgeCalculator = new ageCalculator(36);
     expect(myAgeCalculator.ageCalc()).toEqual([8.64, 22.32, 67.67999999999999, 426.96])
   });
+
+  test('should return users life expectancy based on average male life expectancy', ()=> {
+    const myAgeCalculator = new ageCalculator(36);
+    expect(myAgeCalculator.expectCalc()).toEqual(35);
+  })
 });

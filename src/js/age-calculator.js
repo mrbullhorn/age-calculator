@@ -12,4 +12,9 @@ export default class ageCalculator {
     ageArray.push(mercAge, venAge, marsAge, jupAge);
     return ageArray;
   }
+
+  expectCalc() {
+    let lifeExpect = Math.round(70.6 - this.ageInput);
+    return lifeExpect;
+  }
 }
