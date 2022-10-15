@@ -6,10 +6,8 @@ export default class ageCalculator {
   ageCalc() {
     this.mercAge = Math.round(this.ageInput / (0.24));
     this.venAge = Math.round(this.ageInput / (0.62));
-    /*let marsAge = Math.round(this.ageInput / (1.88));
-    let jupAge = Math.round(this.ageInput / (11.86));
-    ageArray.push(mercAge, venAge, marsAge, jupAge);
-    return ageArray;*/
+    this.marsAge = Math.round(this.ageInput / (1.88));
+    this.jupAge = Math.round(this.ageInput / (11.86));
   }
 
   expectCalc() {

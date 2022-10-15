@@ -1,26 +1,33 @@
 import ageCalculator from './../src/js/age-calculator.js'
 
 describe ('ageCalculator', () => {
+  let myAgeCalculator;
+
+  beforeEach(() => {
+    myAgeCalculator = new ageCalculator(36);
+  });
+
   test('should create a calculator object with an age property', ()=> {
-    const myAgeCalculator = new ageCalculator(36);
+
     expect(myAgeCalculator.ageInput).toEqual(36);
   });
 
   test('should return users age in Mercury years', ()=> {
-    const myAgeCalculator = new ageCalculator(36);
+
     myAgeCalculator.ageCalc();
     expect(myAgeCalculator.mercAge).toEqual(150);
   });
 
-  test('should return users age in Mercury years and Venus years', ()=> {
-    const myAgeCalculator = new ageCalculator(36);
+  test('should add properties for users age in Mercury years and Venus years', ()=> {
+
     myAgeCalculator.ageCalc();
     expect(myAgeCalculator.mercAge).toEqual(150);
     expect(myAgeCalculator.venAge).toEqual(58);
   });
 
-  /*test('should return users age in an array in Mercury, Venus, Mars and Jupiter years', ()=> {
+  /*test('should add properties for users age in Mercury, Venus, Mars and Jupiter years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
+    myAgeCalculator.ageCalc();
     expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3]);
   });
 
