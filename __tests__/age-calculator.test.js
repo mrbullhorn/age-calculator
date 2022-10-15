@@ -47,9 +47,11 @@ test('should add properties for users age in Mercury, Venus, Mars and Jupiter ye
     expect(myAgeCalculator.positiveArray[0]).toEqual(29);
   });
 
-  /*test('if users age surpassed life expectancy should return array of values of years lived past life expectancy', ()=> {
+  test('if users age surpassed life expectancy should return array of values of years lived past life expectancy', ()=> {
     let myAgeCalculator = new ageCalculator(100);
-    expect(myAgeCalculator.expectCalc()).toEqual([29, 123, 47, 15, 2]);
-  });*/
+    myAgeCalculator.ageCalc();
+    myAgeCalculator.expectCalc();
+    expect(myAgeCalculator.positiveArray).toEqual([29, 123, 47, 15, 2]);
+  });
 });
 
