@@ -12,12 +12,14 @@ describe ('ageCalculator', () => {
     expect(myAgeCalculator.mercAge).toEqual(150);
   });
 
-  /*test('should return users age in Mercury years and Venus years', ()=> {
+  test('should return users age in Mercury years and Venus years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.ageCalc()[0, 1]).toEqual((150, 58));
+    myAgeCalculator.ageCalc();
+    expect(myAgeCalculator.mercAge).toEqual(150);
+    expect(myAgeCalculator.venAge).toEqual(58);
   });
 
-  test('should return users age in an array in Mercury, Venus, Mars and Jupiter years', ()=> {
+  /*test('should return users age in an array in Mercury, Venus, Mars and Jupiter years', ()=> {
     const myAgeCalculator = new ageCalculator(36);
     expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3]);
   });
