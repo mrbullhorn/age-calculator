@@ -36,12 +36,11 @@ test('should add properties for users age in Mercury, Venus, Mars and Jupiter ye
   expect(myAgeCalculator.expectCalc()[1]).toEqual(144);
   });
 
-   /*test('should return users life expectancy on all planets based on average male life expectancy', ()=> {
-    const myAgeCalculator = new ageCalculator(36);
-    expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3]);
+   test('should return users life expectancy on all planets based on average male life expectancy', ()=> {
+     expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3]);
   });
 
-  test('should determine if input has surpassed life expectancy', ()=> {
+  /*test('should determine if input has surpassed life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(100);
     expect(myAgeCalculator.expectCalc()[0]).toEqual(29);
   });
