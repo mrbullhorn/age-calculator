@@ -20,9 +20,15 @@ This work in progress is designed to allow a user to enter their age and have th
 
 ## Setup/Installation Requirements
 
-* _Clone this repository to your desktop._
-* _open in Visual Studio Code (or equivilant editor or bash)
-* _run npm test
+1. Clone the repository: '[https://github.com/mrbullhorn/age-calculator]'
+2. Navigate to the '[age-calculator]' directory on your computer
+3. Open with your favorite text editor 
+4. To start a development server and view the project in the browser:
+- Navigate to '[age-calculator]' in your command line
+- Run the command "npm install" to install dependencies
+- Optionally, run the command "npm run build" to bundle the files
+- Finally, run the command "npm run start" to start a development server
+5. To run tests, navigate to '[age-calculator]' in your terminal and run the command "npm run test"
 
 ## Known Bugs
 
