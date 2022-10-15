@@ -11,21 +11,24 @@ export default class ageCalculator {
   }
 
   expectCalc() {
-    let expectArray = [];
+    this.expectArray = [];
     let lifeExpect = Math.round(70.6 - this.ageInput);
     let mercExpect = 294 - this.mercAge;
     let venExpect = 114 - this.venAge;
     let marsExpect = 38 - this.marsAge;
     let jupExpect = 6 - this.jupAge;
-    expectArray.push(lifeExpect, mercExpect, venExpect, marsExpect, jupExpect);
+    this.expectArray.push(lifeExpect, mercExpect, venExpect, marsExpect, jupExpect);
+    console.log
     if (this.ageInput > 70.6) {
        let surpassArray = [];
-       expectArray.forEach((e) => {
+       this.expectArray.forEach((e) => {
         surpassArray.push(Math.abs(e))
        });
+       console.log(this.expectArray);
+       console.log(surpassArray);
        return surpassArray;
       } else {
-    return expectArray;
+    return this.expectArray;
     }
   }
 };
