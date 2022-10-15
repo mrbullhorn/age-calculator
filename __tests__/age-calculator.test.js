@@ -8,30 +8,29 @@ describe ('ageCalculator', () => {
   });
 
   test('should create a calculator object with an age property', ()=> {
-
     expect(myAgeCalculator.ageInput).toEqual(36);
   });
 
   test('should return users age in Mercury years', ()=> {
-
     myAgeCalculator.ageCalc();
     expect(myAgeCalculator.mercAge).toEqual(150);
   });
 
   test('should add properties for users age in Mercury years and Venus years', ()=> {
-
     myAgeCalculator.ageCalc();
     expect(myAgeCalculator.mercAge).toEqual(150);
     expect(myAgeCalculator.venAge).toEqual(58);
   });
 
-  /*test('should add properties for users age in Mercury, Venus, Mars and Jupiter years', ()=> {
-    const myAgeCalculator = new ageCalculator(36);
+test('should add properties for users age in Mercury, Venus, Mars and Jupiter years', ()=> {
     myAgeCalculator.ageCalc();
-    expect(myAgeCalculator.ageCalc()).toEqual([150, 58, 19, 3]);
+    expect(myAgeCalculator.mercAge).toEqual(150);
+    expect(myAgeCalculator.venAge).toEqual(58);
+    expect(myAgeCalculator.marsAge).toEqual(19);
+    expect(myAgeCalculator.jupAge).toEqual(3);
   });
 
-  test('should return users life expectancy based on average male life expectancy', ()=> {
+    /*test('should return users life expectancy based on average male life expectancy', ()=> {
     const myAgeCalculator = new ageCalculator(36);
     expect(myAgeCalculator.expectCalc()[0]).toEqual(35);
   });
