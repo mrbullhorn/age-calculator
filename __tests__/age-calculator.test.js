@@ -1,6 +1,6 @@
 import ageCalculator from './../src/js/age-calculator.js'
 
-/*describe ('ageCalculator', () => {
+describe ('ageCalculator', () => {
   let myAgeCalculator;
 
   beforeEach(() => {
@@ -39,16 +39,12 @@ test('should add properties for users age in Mercury, Venus, Mars and Jupiter ye
   test('should return users life expectancy on all planets based on average male life expectancy', ()=> {
   expect(myAgeCalculator.expectCalc()).toEqual([35, 144, 56, 19, 3]);
   });
-});*/
-
-describe('expectCalc', ()=> {
-
 
   test('should determine if input has surpassed life expectancy', ()=> {
     let myAgeCalculator = new ageCalculator(100);
     myAgeCalculator.ageCalc();
     myAgeCalculator.expectCalc();
-    expect(myAgeCalculator.expectArray[0]).toEqual(29);
+    expect(myAgeCalculator.positiveArray[0]).toEqual(29);
   });
 
   /*test('if users age surpassed life expectancy should return array of values of years lived past life expectancy', ()=> {

@@ -19,13 +19,16 @@ export default class ageCalculator {
     let jupExpect = 6 - this.jupAge;
     this.expectArray.push(lifeExpect, mercExpect, venExpect, marsExpect, jupExpect);
     console.log(this.expectArray);
-    //if (this.ageInput > 70.6) {
+    if (this.ageInput > 70.6) {
+      this.positiveArray = []
         this.expectArray.forEach((e) => {
-        Math.abs(e);
+        this.positiveArray.push(Math.abs(e));
       });
-      return this.expectArray;
-    //} else {
-    //return this.expectArray;
-    //}
+      console.log("positive array:", this.positiveArray);
+      return this.positiveArray;
+      } else {
+      console.log("expect array", this.expectArray);
+    return this.expectArray;
+    }
   }
 };
