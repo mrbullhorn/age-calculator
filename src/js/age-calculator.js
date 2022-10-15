@@ -1,16 +1,16 @@
 export default class ageCalculator {
   constructor(age) {
     this.ageInput = age;
+    this.mercAge = 0;
   }
 
   ageCalc() {
-    let ageArray = [];
-    let mercAge = Math.round(this.ageInput / (0.24));
-    let venAge = Math.round(this.ageInput / (0.62));
+    this.mercAge = Math.round(this.ageInput / (0.24));
+    /*let venAge = Math.round(this.ageInput / (0.62));
     let marsAge = Math.round(this.ageInput / (1.88));
     let jupAge = Math.round(this.ageInput / (11.86));
     ageArray.push(mercAge, venAge, marsAge, jupAge);
-    return ageArray;
+    return ageArray;*/
   }
 
   expectCalc() {
