@@ -13,7 +13,7 @@ export default class ageCalculator {
   expectCalc() {
     let expectArray = [];
     let lifeExpect = Math.round(70.6 - this.ageInput);
-    let mercExpect = 294 - (Math.round(this.ageInput / (0.24)));
+    let mercExpect = 294 - this.mercAge;
     let venExpect = 114 - (Math.round(this.ageInput / (0.62)));
     let marsExpect = 38 - (Math.round(this.ageInput / (1.88)));
     let jupExpect = 6 - (Math.round(this.ageInput / (11.86)));
